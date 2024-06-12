@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Publisher-Subscriber System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-4">Blogs</h1>
+    <ul class="list-group">
+        {% for blog_id, blog in blogs.items() %}
+            <li class="list-group-item">
+                <a href="{{ url_for('blog', blog_id=blog_id) }}">{{ blog.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>

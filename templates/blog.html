@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ blog.title }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-4">{{ blog.title }}</h1>
+    <p><a href="{{ blog.url }}" target="_blank">Read the full blog</a></p>
+    <form action="{{ url_for('subscribe') }}" method="POST">
+        <input type="hidden" name="topic_id" value="{{ blog_id }}">
+        <div class="form-group">
+            <label for="subscriber_id">Your ID</label>
+            <input type="text" class="form-control" id="subscriber_id" name="subscriber_id" required>
+        </div>
+        <div class="form-group">
+            <label for="subscriber_email">Your Email</label>
+            <input type="email" class="form-control" id="subscriber_email" name="subscriber_email" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+    <form action="{{ url_for('unsubscribe') }}" method="POST" class="mt-2">
+        <input type="hidden" name="topic_id" value="{{ blog_id }}">
+        <div class="form-group">
+            <label for="unsubscribe_id">Your ID</label>
+            <input type="text" class="form-control" id="unsubscribe_id" name="subscriber_id" required>
+        </div>
+        <button type="submit" class="btn btn-danger">Unsubscribe</button>
+    </form>
+
+    <h2 class="mt-4">Subscribers</h2>
+    <ul class="list-group">
+        {% for subscriber_id, email in subscribers.items() %}
+            <li class="list-group-item">{{ subscriber_id }} ({{ email }})</li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
