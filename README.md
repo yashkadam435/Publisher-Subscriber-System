@@ -86,6 +86,7 @@ Visit the home page to see a list of available blogs. Click on a blog title to v
 
 ## View Subscribers
 Subscribers for each blog are listed on the respective blog page. The total number of unique subscribers can be viewed on the subscribers page.
+
 <img width="898" alt="image" src="https://github.com/yashkadam435/Publisher-Subscriber-System/assets/108817280/7a8f2768-fd12-4cbc-818f-c06372f2d65d">
 
 
