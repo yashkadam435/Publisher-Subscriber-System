@@ -24,7 +24,7 @@ Here are the blogs you can subscribe to:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/publisher-subscriber-system.git
+git clone https://github.com/yashkadam435/publisher-subscriber-system.git
 cd publisher-subscriber-system
 ```
 2. Create and activate a virtual environment:
